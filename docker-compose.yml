@@ -1,0 +1,31 @@
+version: "3"
+services:
+  web:
+    build: ./web
+    ports:
+      - "8080:80"
+    volumes:
+      - ./html:/var/www/html:cached
+    depends_on:
+      - db
+  db:
+    build: ./db
+    volumes:
+      - ./db/mysql_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "password"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=a8faf2051717
+      - PMA_USER=root
+      - PMA_PASSWORD=password
+    restart: always
+    links:
+      - db
+    ports:
+      - 8888:80
+    volumes:
+      - /sessions
