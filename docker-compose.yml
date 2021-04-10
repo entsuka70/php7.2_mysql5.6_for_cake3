@@ -19,7 +19,7 @@ services:
     image: phpmyadmin/phpmyadmin
     environment:
       - PMA_ARBITRARY=1
-      - PMA_HOST=a8faf2051717
+      - PMA_HOST=aaa28024d082
       - PMA_USER=root
       - PMA_PASSWORD=password
     restart: always

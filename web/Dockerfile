@@ -7,6 +7,12 @@ RUN apt-get update \
 RUN ln -s /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled/rewrite.load
 RUN ln -s /etc/apache2/mods-available/vhost_alias.load /etc/apache2/mods-enabled
 RUN echo ServerName $HOSTNAME > /etc/apache2/conf-available/fqdn.conf && a2enconf fqdn
+RUN apt-get install -y \
+    curl \
+    gnupg
+RUN curl -sL https://deb.nodesource.com/setup_11.x | bash -
+RUN apt-get install -y nodejs
+RUN npm install npm@latest -g
 
 COPY ./base.conf /etc/apache2/sites-available/base.conf
 RUN a2ensite base.conf
