@@ -1,0 +1,30 @@
+{
+    "printWidth": 160,
+    "tabWidth": 4,
+    "useTabs": false,
+    "endOfLine": "lf",
+
+    "overrides": [
+        {
+            "files": "*.js",
+            "options": {
+                "semi": true,
+                "bracketSpacing": true,
+                "singleQuote": true,
+                "quoteProps": "preserve"
+            }
+        },
+        {
+            "files": "*.php",
+            "options": {
+                "parser": "php",
+                "phpVersion": "7.0",
+                "trailingCommaPHP": true,
+                "braceStyle": "psr-2",
+                "semi": true,
+                "bracketSpacing": true,
+                "singleQuote": true
+            }
+        }
+    ]
+}

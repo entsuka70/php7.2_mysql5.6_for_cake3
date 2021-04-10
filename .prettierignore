@@ -1,0 +1,33 @@
+.git/
+.github/
+node_modules/
+
+*.min.js
+*.min.css
+
+*.yml
+*.yaml
+*.json
+*.md
+*.svg
+
+.prettierignore
+
+###### Project files
+### CakePHP
+/cms/bin/
+/cms/vendor/
+/cms/tmp/
+/cms/logs/
+/cms/webroot/files/
+/cms/webroot/tmp/
+
+/cms/composer.json
+/cms/composer.lock
+
+/cms/src/Console/Installer.php
+/cms/webroot/index.php
+
+*.ctp
+*.po
+*.pot
